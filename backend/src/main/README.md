@@ -35,6 +35,10 @@ Bei diesem Projekt handelt es sich um eine Passwort-Manager-Backend-Anwendung mi
 3. aktualisieren Sie den Datenbank-Benutzernamen und das Passwort in `src/main/resources/application.properties` auf Ihren eigenen.
 4. starten Sie die Anwendung von Ihrer IDE oder mit dem `mvn spring-boot:run` Befehl.
 
+## Fotos
+![img_1.png](img_1.png),
+![img.png](img.png)
+
 
 Projekt-Architektur: Eine technische Reise durch den Passwort-Manager
 Nachdem wir das "Was" unseres Projekts verstanden haben, schauen wir uns nun das "Wie" an. Wie genau funktionieren die einzelnen Teile im Maschinenraum unserer Anwendung?
