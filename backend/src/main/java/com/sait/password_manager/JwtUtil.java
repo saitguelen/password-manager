@@ -1,5 +1,5 @@
 package com.sait.password_manager;
-
+//JWT - JSON Web Token)
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Value;

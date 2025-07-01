@@ -3,16 +3,16 @@ import zxcvbn from 'zxcvbn';
 
 const PasswordStrengthMeter = ({ password }) => {
   const testResult = zxcvbn(password);
-  // zxcvbn skoru 0 (en kötü) ile 4 (en iyi) arasındadır.
+  // Der zxcvbn-Wert liegt zwischen 0 (am schlechtesten) und 4 (am besten).
   const score = testResult.score;
 
   const getBarColor = () => {
     switch (score) {
-      case 0: return '#e74c3c'; // Kırmızı
-      case 1: return '#e67e22'; // Turuncu
-      case 2: return '#f1c40f'; // Sarı
-      case 3: return '#2ecc71'; // Yeşil
-      case 4: return '#27ae60'; // Daha koyu yeşil
+      case 0: return '#e74c3c'; // rot
+      case 1: return '#e67e22'; // Orange
+      case 2: return '#f1c40f'; // Gelb
+      case 3: return '#2ecc71'; // Grün
+      case 4: return '#27ae60'; // Dunkel Grün
       default: return 'grey';
     }
   };

@@ -1,5 +1,7 @@
 package com.sait.password_manager;
-
+//JWT - JSON Web Token)-->Sicherheitsfilter
+// Seine Hauptaufgabe ist es, jede einzelne HTTP-Anfrage (Request), die an deine Anwendung gesendet wird,
+// abzufangen und zu überprüfen, bevor sie ihr eigentliches Ziel (den Controller) erreicht.
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

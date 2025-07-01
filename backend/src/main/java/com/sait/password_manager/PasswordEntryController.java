@@ -42,9 +42,9 @@ public class PasswordEntryController {
     }
     /**
      * Aktualisiert einen vorhandenen Passworteintrag.
-     * @param id Die ID des zu aktualisierenden Eintrags.
-     * @param newEntryData Die neuen Daten des Passworteintrags.
-     * @return Der aktualisierte Eintrag oder ein Fehler.
+      @param id Die ID des zu aktualisierenden Eintrags.
+      @param newEntryData Die neuen Daten des Passworteintrags.
+      @return Der aktualisierte Eintrag oder ein Fehler.
      */
     @PutMapping("/{id}")
     public ResponseEntity<PasswordEntry> updateEntry(@PathVariable Long id, @RequestBody PasswordEntry newEntryData) {
@@ -75,8 +75,8 @@ public class PasswordEntryController {
 
     /**
      * Löscht einen vorhandenen Passworteintrag.
-     * @param id Die ID des zu löschenden Eintrags.
-     * @return Erfolgs- oder Fehlerstatus.
+      @param id Die ID des zu löschenden Eintrags.
+      @return Erfolgs- oder Fehlerstatus.
      */
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteEntry(@PathVariable Long id) {
