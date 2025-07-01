@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- Bu modülün, bir üst klasördeki ana projeye (parent) ait olduğunu belirtiyoruz. -->
+    <!-- main Projekt  (parent)  -->
     <parent>
         <groupId>com.sait</groupId>
         <artifactId>password-manager-fullstack</artifactId>
@@ -11,12 +11,12 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <!-- Bu modülün kendi özel bilgileri -->
+    <!-- einzige information für backend -->
     <artifactId>backend</artifactId>
     <name>backend</name>
     <description>Password Manager Backend API</description>
 
-    <!-- Projenin karakter kodlamasını UTF-8 olarak ayarlıyoruz -->
+    <!--  wir ersetzen UTF-8  -->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -37,21 +37,21 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!-- MySQL Sürücüsü -->
+        <!-- MySQL datanbank -->
         <dependency>
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
             <scope>runtime</scope>
         </dependency>
 
-        <!-- Lombok (Temiz kod için) -->
+        <!-- Lombok für einfache Code -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
 
-        <!-- JWT Kütüphaneleri -->
+        <!-- JWT Bibliothek -->
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt-api</artifactId>
@@ -70,7 +70,7 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- Test Bağımlılıkları -->
+        <!-- Test Abhängigkeit -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -85,7 +85,7 @@
 
     <build>
         <plugins>
-            <!-- Bu plugin, çalıştırılabilir JAR dosyası oluşturmak için gereklidir -->
+            <!-- JAR datei -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -101,3 +101,10 @@
         </plugins>
     </build>
 </project>
+
+<!--<&#45;&#4 Die Einkaufsliste (pom.xml)-->
+<!--        Das Allererste, was ich heute Morgen gemacht habe, war, meine Einkaufsliste zu schreiben. Was braucht eine moderne Java-Küche?-->
+<!--        • Ein stabiles Grundgerüst: Dafür habe ich Spring Boot gewählt. Es ist wie ein Set von hochwertigen Edelstahl-Arbeitsflächen und Geräten, die perfekt zusammenpassen.-->
+<!--        • Einen großen, sicheren Vorratsraum: Dafür habe ich mich für eine MySQL-Datenbank entschieden.-->
+<!--        • Ein modernes Sicherheitssystem: Spring Security ist hier wie ein professionelles Schloss- und Alarmsystem für unsere Küche.-->
+<!--        Diese Liste habe ich in eine Datei namens pom.xml geschrieben. Mein Einkäufer, Maven, hat dann alle diese Werkzeuge für mich besorgt und bereitgestellt&ndash;&gt;-->

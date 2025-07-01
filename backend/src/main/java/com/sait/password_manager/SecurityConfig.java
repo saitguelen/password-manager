@@ -66,3 +66,19 @@ public class SecurityConfig {
 
 
 }
+/*Kısa Özet
+Bean: Spring konteynerinin yaşam döngüsünü yönettiği bir Java nesnesidir.
+@Bean: Bir metodu, Spring için bir Bean üreten fabrikaya dönüştürür. Nesneyi Spring'e verir.
+@Autowired: Spring konteynerinden yönetilen bir Bean'i talep eder ve bir alana/constructora enjekte eder. Nesneyi Spring'den alır.
+Bu ikili, Spring'in temelini oluşturan Dependency Injection (DI) mekanizmasını hayata geçirir ve
+bileşenlerin birbirine olan bağımlılığını azaltarak (gevşek bağlılık - loose coupling) esnek bir mimari sunar.
+
+Kurze Zusammenfassung
+Bean: Ein Java-Objekt, dessen Lebenszyklus vom Spring-Container verwaltet wird.
+
+@Bean: Verwandelt eine Methode in eine Fabrik, die eine Bean für Spring produziert. Sie gibt ein Objekt an Spring.
+
+@Autowired: Fordert eine verwaltete Bean vom Spring-Container an und injiziert sie in ein Feld/einen Konstruktor. Sie nimmt ein Objekt von Spring.
+
+Dieses Duo bildet die Grundlage des Dependency Injection (DI)-Mechanismus von Spring und ermöglicht eine flexible Architektur,
+indem es die Komponenten lose koppelt (loose coupling).*/

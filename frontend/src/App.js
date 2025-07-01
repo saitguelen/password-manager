@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './App.css';
-import Dashboard from './Dashboard'; // Dashboard bileşenimizi import ediyoruz
+import Dashboard from './Dashboard';
 import logo from './schlusselperson.png';
 import { Toaster } from 'react-hot-toast';
 
-// Yeni: Login Formu için ayrı bir bileşen
+// Login
 function LoginForm({ onLoginSuccess, onSwitchToRegister }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -19,7 +19,7 @@ function LoginForm({ onLoginSuccess, onSwitchToRegister }) {
         username,
         password
       });
-      onLoginSuccess(response.data.token); // Başarılı olunca token'ı ana bileşene gönder
+      onLoginSuccess(response.data.token);
     } catch (err) {
       setError('Anmeldung fehlgeschlagen. Bitte überprüfen Sie Ihre Eingaben.');
     }
@@ -35,13 +35,14 @@ function LoginForm({ onLoginSuccess, onSwitchToRegister }) {
         {error && <p className="error-message">{error}</p>}
       </form>
       <button onClick={onSwitchToRegister} className="link-button">
-        Noch kein Konto? Jetzt registrieren.
+        Noch kein Konto?
+        Jetzt registrieren.
       </button>
     </div>
   );
 }
 
-// Yeni: Kayıt Formu için ayrı bir bileşen
+// RegisterForm
 function RegisterForm({ onSwitchToLogin }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -81,23 +82,25 @@ function RegisterForm({ onSwitchToLogin }) {
 }
 
 
-// Ana App Bileşeni
+// main APP
 function App() {
   const [token, setToken] = useState(null);
-  const [view, setView] = useState('login'); // 'login' veya 'register'
+  const [view, setView] = useState('login'); // 'login' oder 'register'
 
   const handleLogout = () => {
     setToken(null);
-    setView('login'); // Çıkış yapınca login ekranına dön
+    setView('login'); // zurück main Fenster
   };
 
-  // Eğer token varsa (kullanıcı giriş yapmışsa), Dashboard'ı göster
+  // Show Dashboard, wenn token er hat
   if (token) {
     return (
         <div className="App">
             <Toaster position="top-right" />
+
             <header className="App-header">
-                <h1>Passwort-Manager</h1>
+            <img src={logo} className="auth-logo" alt="Passwort-Manager Logo" />
+                <h1><strong>Passwort-Manager</strong></h1>
                 <Dashboard token={token} />
                 <button onClick={handleLogout} className="logout-button">Ausloggen</button>
             </header>
@@ -105,12 +108,12 @@ function App() {
     );
   }
 
-  // Token yoksa, 'view' state'ine göre Login veya Register formunu göster
+  //wenn er nicht token hat,, zeigt Login oder Register form
   return (
     <div className="App">
       <header className="App-header">
       <img src={logo} className="auth-logo" alt="Passwort-Manager Logo" />
-        <h1>Passwort-Manager</h1>
+        <h1><strong>Passwort-Manager</strong></h1>
         {view === 'login' ? (
           <LoginForm
             onLoginSuccess={setToken}
