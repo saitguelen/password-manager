@@ -91,10 +91,19 @@ button:hover {
   background-color: #2980b9;
 }
 
-.logout-button, button[type="button"] {
-    background-color: #e74c3c;
+.logout-button {
+    position: fixed; /* Sayfaya göre sabit konumlandırma */
+    top: 20px;       /* Yukarıdan 20 piksel boşluk */
+    right: 20px;      /* Sağdan 20 piksel boşluk */
+
+    width: auto;     /* Genişliği içeriğine göre otomatik ayarla */
+    padding: 10px 20px; /* İç boşlukları küçültüyoruz */
+    font-size: 1rem;    /* Font boyutunu küçültüyoruz */
+    z-index: 1000;   /* Diğer elemanların üzerinde kalmasını sağlar */
+    background-color: #e74c3c; /* Kırmızı rengi koruyoruz */
 }
-.logout-button:hover, button[type="button"]:hover {
+
+.logout-button:hover {
     background-color: #c0392b;
 }
 

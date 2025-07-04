@@ -37,7 +37,7 @@ Bei diesem Projekt handelt es sich um eine Passwort-Manager-Backend-Anwendung mi
 
 ## Fotos
 ![img_1.png](img_1.png),
-![img.png](img.png)
+![img.png](img_2.png)
 
 
 Projekt-Architektur: Eine technische Reise durch den Passwort-Manager
